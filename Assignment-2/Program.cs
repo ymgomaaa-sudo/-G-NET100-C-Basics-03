@@ -27,15 +27,13 @@ namespace Assignment_2
             //#endregion
             //#region Q3
             ///*Create a StringBuilder, Append() the text "Book List", then Append() " - Updated" onto the same object. Print the final result.*/
-            //StringBuilder text = new StringBuilder();
-            //text.Append("Book List");
+            //StringBuilder text = new StringBuilder("Book List");
             //text.Append(" - Updated");
             //Console.WriteLine(text);
             //#endregion
             //#region Q4 
             /*Using the StringBuilder from the question above, use Replace() to change "Book List" into "Library". Print the result.*/
-            //StringBuilder text = new StringBuilder();
-            //text.Append("Book List");
+            //StringBuilder text = new StringBuilder("Book List");
             //text.Append(" - Updated");
             //text.Replace("Book List", "Library");
             //Console.WriteLine(text);
@@ -121,7 +119,7 @@ namespace Assignment_2
             //int i = 0;
             //while (i < books.Length)
             //{
-            //    Console.WriteLine(books[i]);
+            //    Console.WriteLine($"{i + 1}. {books[i]}");
             //    i++;
             //}
             //#endregion
@@ -135,10 +133,25 @@ namespace Assignment_2
             //}
             //while (count < 3);
             //#endregion
-            #region Q14
+            //#region Q14
+
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+            //foreach (string book in books)
+            //{
+            //    Console.WriteLine(books);
+            //}
+            //#endregion
+            #region
+            /*Using the same books array, loop through it and print each title, but stop completely (break) once you reach "Refactoring". */
             string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+
             foreach (string book in books)
             {
+                if (book == "Refactoring")
+                {
+                    break;
+                }
+
                 Console.WriteLine(book);
             }
             #endregion
