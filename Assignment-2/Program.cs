@@ -153,19 +153,34 @@ namespace Assignment_2
             //    Console.WriteLine(book);
             //}
             //#endregion
-            #region Q16
-            /*Using the same books array, print every title except "The Pragmatic Programmer"(skip it with continue, don't stop the loop).*/
+            //#region Q16
+            ///*Using the same books array, print every title except "The Pragmatic Programmer"(skip it with continue, don't stop the loop).*/
+            //string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
+            //foreach (string book in books)
+            //{
+            //    if (book == "The Pragmatic Programmer")
+            //    {
+            //        continue;
+            //    }
+            //    Console.WriteLine(book);
+            //}
+            //#endregion
+            #region Q17
+            /*Write a method PrintFirstBook() that prints the first book in the books array. If the array is empty, use return to exit the method
+             early instead of printing anything. */
             string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
-            foreach (string book in books)
+            
+            void PrintFirstBook()
             {
-                if (book == "The Pragmatic Programmer")
+                if (books.Length == 0)
                 {
-                    continue;
+                    return;
                 }
-                Console.WriteLine(book);
-            }
-            #endregion
 
+                Console.WriteLine(books[0]);
+            }
+            PrintFirstBook();
+            #endregion
         }
     }
 }
